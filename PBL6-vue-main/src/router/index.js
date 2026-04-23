@@ -3,6 +3,7 @@ import Login from '../components/Login.vue';
 import Index from '../components/Index.vue';
 import Hot from '../components/Hot.vue';
 import My from '../components/My.vue';
+import Settings from '../components/Settings.vue';
 
 const routes = [
   {
@@ -24,6 +25,11 @@ const routes = [
     path: '/my',
     name: 'My',
     component: My
+  },
+  {
+    path: '/settings',
+    name: 'Settings',
+    component: Settings
   }
 ];
 
