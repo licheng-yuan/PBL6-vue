@@ -14,7 +14,10 @@ service.interceptors.request.use(
       config.headers.Authorization = `Bearer ${token}`;
     }
 
-    config.headers['Content-Type'] = 'application/json; charset=utf-8';
+    // 只有当不是FormData时才设置Content-Type为json
+    if (!(config.data instanceof FormData)) {
+      config.headers['Content-Type'] = 'application/json; charset=utf-8';
+    }
 
     return config;
   },
